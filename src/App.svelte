@@ -6,8 +6,8 @@
 	import { onMount } from 'svelte';
 
 	let now = new Date();
-	let hide = false;
 	
+	$: hide = ms > 800;
 	$: d = now.getDate();
 	$: hours = now.getHours();
 	$: minutes = now.getMinutes();
@@ -21,7 +21,6 @@
 	onMount(() => {
 		const interval = setInterval(() => {
 			now = new Date();
-			hide = ms > 800;
 		}, 100);
 
 		return () => {
