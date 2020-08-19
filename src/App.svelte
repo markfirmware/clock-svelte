@@ -7,7 +7,7 @@
 	import { onMount } from 'svelte';
 
 	let civil_twilight_begin = new Date("2020-08-19T10:33:15+00:00");
-	let civil_twilight_end = new Date("22020-08-20T01:02:41+00:00");
+	let civil_twilight_end = new Date("2020-08-20T01:02:41+00:00");
 
 	let light_begin = civil_twilight_begin.getHours() * 60 + civil_twilight_begin.getMinutes();
 	let light_end = civil_twilight_end.getHours() * 60 + civil_twilight_end.getMinutes();
